@@ -2,6 +2,11 @@
   "expo": {
     "name": "mobile-project",
     "slug": "mobile-project",
+    "facebookAppId": "1140521061014991",
+    "extra": {
+      "TICKETMASTER_API_KEY": "XSl4KfXZLzzTHF9jfGJlxfLif2lCA8Im",
+      "GOOGLE_MAPS_API_KEY": "AIzaSyAQqfjB_YYkMgn_uPnOadzHcfALAzDilFg"
+    },
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,13 +14,27 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "usesAppleSignIn": true,
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": [
+          "http",
+          "https",
+          "http",
+          "https"
+        ]
+      },
+      "bundleIdentifier": "com.galaxies.firebase",
+      "googleServicesFile": "./app/src/assets/GoogleService-Info.plist"
+
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.galaxies.firebase",
+      "googleServicesFile": "./app/src/assets/google-services.json"
     },
     "web": {
       "bundler": "metro",
@@ -32,7 +51,22 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      ["expo-build-properties",
+      {
+        "ios":{
+          "useFrameworks":"static"
+        }
+      }
+    ],
+    [
+      "expo-notifications",
+      {
+        "icon": "./assets/notification-icon.png",
+        "color": "#ffffff",
+        "sounds": ["./assets/notification-sound.wav"]
+      }
+    ]
     ],
     "experiments": {
       "typedRoutes": true
