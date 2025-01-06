@@ -2,7 +2,7 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Uygulama Tanıtım:
+## Uygulama Tanıtım :
 
 ![1](https://github.com/user-attachments/assets/273d2387-32ff-408c-a4a5-dc24cd3b0cb6)
 ![2](https://github.com/user-attachments/assets/71251613-5408-4c0f-90a8-500e5cd381a9)
